@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  let totalsum=a+b;
-  let statement=`The sum of ${a} and ${b} is ${totalsum}.`;
-  console.log([totalsum, statement]);
+  let totalsum1=a+b;
+  let statement1=`The sum of ${a} and ${b} is ${totalsum1}.`;
+  console.log([totalsum1, statement1]);
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -29,9 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  let product=a*b;
-  let statement=`The product of ${a} and ${b} is ${product}.`;
-  console.log([product, statement]);
+  let product1=a*b;
+  let statement2=`The product of ${a} and ${b} is ${product1}.`;
+  console.log([product1, statement2]);
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -52,7 +52,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let totalsum2=a+b+c;
+  let product2=a*b*c;
+  let statement3=`${a} and ${b} and ${c} sum to ${totalsum2}.`;
+  let statement4=`The product of ${a} and ${b} and ${c} is ${product}.`;
+  console.log([totalsum2, product2, statement3, statement4]);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
