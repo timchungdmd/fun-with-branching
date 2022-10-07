@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   let totalsum1=a+b;
   let statement1=`The sum of ${a} and ${b} is ${totalsum1}.`;
-  console.log([totalsum1, statement1]);
+  return ([totalsum1, statement1]);
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -31,7 +31,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let product1=a*b;
   let statement2=`The product of ${a} and ${b} is ${product1}.`;
-  console.log([product1, statement2]);
+  return([product1, statement2]);
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -56,9 +56,8 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let product2=a*b*c;
   let statement3=`${a} and ${b} and ${c} sum to ${totalsum2}.`;
   let statement4=`The product of ${a} and ${b} and ${c} is ${product2}.`;
-  console.log([totalsum2, product2, statement3, statement4]);
+  return([totalsum2, product2, statement3, statement4]);
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
@@ -78,10 +77,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-  let firstelement=testArray[0]+testArray[1]+testArray[2];
-  let questionfourstatement=`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${firstelement} is their sum.`;
-  console.log([firstelement, questionfourstatement]);
+  let sum1=sum(sumArr[0],sumArr[1]);
+  let sum2=sum(sumArr[2],sum1[0]);
+  let questionfourstatement=`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum2[0]} is their sum.`;
+  return([sum2[0],questionfourstatement]);
 }
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -101,8 +102,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let mult1=multiply(multArr[0],multArr[1]);
+  let mult2=multiply(multArr[2],multArr[0]);
+  let questionfivestatement=`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${mult2[0]}.`;
+  return([mult2[0],questionfivestatement]);
 }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
