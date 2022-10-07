@@ -55,7 +55,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let totalsum2=a+b+c;
   let product2=a*b*c;
   let statement3=`${a} and ${b} and ${c} sum to ${totalsum2}.`;
-  let statement4=`The product of ${a} and ${b} and ${c} is ${product}.`;
+  let statement4=`The product of ${a} and ${b} and ${c} is ${product2}.`;
   console.log([totalsum2, product2, statement3, statement4]);
 }
 
@@ -78,7 +78,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let firstelement=testArray[0]+testArray[1]+testArray[2];
+  let questionfourstatement=`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${firstelement} is their sum.`;
+  console.log([firstelement, questionfourstatement]);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
