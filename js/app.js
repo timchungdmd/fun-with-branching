@@ -133,6 +133,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
+
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
   let prevMult=1;                                       
@@ -142,13 +143,10 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let mult=multiply(dynamicArray[i],prevMult);
       prevMult=mult[0];
     }
-return(prevMult);
+let statement=`The numbers ${dynamicArray} have a product of ${prevMult}.`;
+return([prevMult, statement]);
     }  
 
-let statement=`The numbers ${danymicArray} have a product of ${prevMult}.`;
-return([prevMult, statement]);
-  
-}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
