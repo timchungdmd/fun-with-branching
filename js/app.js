@@ -135,6 +135,19 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+  let prevMult=1;                                       
+  let mult1=multiply(dynamicArray[0],dynamicArray[1]);
+      prevMult*=mult1[0];
+  for(let i=2; i<(dynamicArray.length);i++){
+  let mult=multiply(dynamicArray[i],prevMult);
+      prevMult=mult[0];
+    }
+return(prevMult);
+    }  
+
+let statement=`The numbers ${danymicArray} have a product of ${prevMult}.`;
+return([prevMult, statement]);
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
